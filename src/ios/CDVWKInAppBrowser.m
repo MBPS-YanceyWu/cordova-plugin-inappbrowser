@@ -1114,11 +1114,11 @@ BOOL isExiting = FALSE;
     [self.webView goForward];
 }
 
-- (void)viewWillAppear:(BOOL)animated
+// MR-8991 fix the UI issue when back to AppBrowser from camera view .
+- (void)viewDidAppear:(BOOL)animated
 {
     [self rePositionViews];
-    
-    [super viewWillAppear:animated];
+    [super viewDidAppear:animated];
 }
 
 //
